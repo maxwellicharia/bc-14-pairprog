@@ -1,0 +1,13 @@
+    <h1>Signup to Pairprog</h1>
+    
+    <form method="post" action="{{ url_for('signup') }}">
+        
+        <p><label>Username:</label> <input type="text" name="username" required></p>
+        
+        <p><label>Message:</label> <textarea name="message"></textarea></p>
+        
+        <p><button type="submit">Submit</button></p>
+    
+    </form>
+
+    <p>Already have an account? Log in<a href="login.html"> here<a/></p>
