@@ -2,8 +2,6 @@ from flask import render_template, request, redirect, url_for, abort, session
 
 from app import app
 
-login_manager = LoginManager()
-
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -18,4 +16,4 @@ def signup():
 
 @app.route('/login', methods=['POST'])
 def login():
-	
+	pass
