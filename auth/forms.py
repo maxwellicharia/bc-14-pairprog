@@ -1,11 +1,19 @@
 from flask_wtf import FlaskForm
+
 # Flask forms for implementing login and signup
+
 from wtforms import PasswordField, StringField, SubmitField, ValidationError
+
 # Various fields for enabling input areas
+
 from wtforms.validators import DataRequired, Email, EqualTo
+
 # Validators to ensure proper input is given
-from ..models import Employee
+
+from ..models import User
+
 #To change employee
+
 class SignUp(FlaskForm):
     """
         Signup form for the users to create a pairprogramming session account
@@ -29,12 +37,12 @@ class SignUp(FlaskForm):
 
     def check_username_valid(self, field):
     # Function to check whether username is 
-        if Employee.query.filter_by(username=field.data).first():
+        if User.query.filter_by(username=field.data).first():
             raise ValidationError('Username is already in use.')
 
-    def check_password_valid(self, field):
+    def check_email_valid(self, field):
     # Function to check whether the email has been taken by someone
-        if Employee.query.filter_by(password=field.data).first():
+        if User.query.filter_by(Email=field.data).first():
             raise ValidationError('Invalid password, try again.')
 
 class Login(FlaskForm):
