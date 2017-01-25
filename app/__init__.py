@@ -27,7 +27,7 @@ def dev_app(config_name):
 	
 	#method config.from_object to load specific configurations of 'app'
 	
-	app.config.from_pyfile('config.py')
+	# app.config.from_pyfile('config.py')
 
 	#method config.from_pyfile for reference to the 'config.py' file
     
