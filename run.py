@@ -1,10 +1,8 @@
 import os
 
-from app import app, dev_app
-
 from app import set_app
 
-name = os.getenv('FLASK_CONFIG')
+config_name = os.getenv('FLASK_CONFIG')
 # Get the necessary OS environment
 app = dev_app(config_name)
 
