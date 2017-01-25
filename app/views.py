@@ -8,10 +8,7 @@ def index():
 
 @app.route('/signup', methods=['POST'])
 def signup():
-	session['signup'] = request.form['signup']
-    	return redirect(url_for('signup'))
-	return render_template("signup.html")
-
+	if 
 # If user has signed up login immediately
 
 @app.route('/login', methods=['POST'])
