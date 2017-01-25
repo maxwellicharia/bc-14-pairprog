@@ -23,7 +23,8 @@ class ProdConfig(Config):
 
 app_config = {
     'dev': DevConfig,
-    'prod': ProdConfig
+    'prod': ProdConfig,
+    'default': DevConfig
 }
 
 #Creating a variable to access both elements of the class
