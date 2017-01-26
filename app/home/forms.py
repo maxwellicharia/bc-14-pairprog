@@ -10,7 +10,7 @@ from wtforms.validators import DataRequired, Email, EqualTo
 
 # Validators to ensure proper input is given
 
-from ..models import User
+from ..models import Users
 
 #To change employee
 
@@ -45,7 +45,7 @@ class SignUp(FlaskForm):
         if User.query.filter_by(Email=field.data).first():
             raise ValidationError('Invalid password, try again.')
 
-class Login(FlaskForm):
+class LoginForm(FlaskForm):
     """
         Users to log in to their account for pair programming
         """

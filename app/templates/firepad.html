@@ -24,6 +24,14 @@
       width: 60%;
       height: 90%;
     }
+    .powered-by-firepad {
+    position: absolute;
+    display: none;
+    z-index: 5;
+    right: 20px;
+    bottom: 20px;
+    width: 129px;
+    height: 23px;
   </style>
 </head>
 
@@ -49,7 +57,7 @@
       });
       //// Create Firepad.
       var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror, {
-        defaultText: '// JavaScript Editing with Firepad!\nfunction go() {\n  var message = "Hello, world.";\n  console.log(message);\n}'
+        defaultText: '# Python Editing with Firepad!\ndef go(): \n  return "Hello, world."\n '
       });
     }
     // Helper to get hash from end of URL or generate a random one.
@@ -61,6 +69,7 @@
       } else {
         ref = ref.push(); // generate unique location.
         window.location = window.location + '#' + ref.key; // add it as a hash to the URL.
+        var link = window.location
       }
       if (typeof console !== 'undefined') {
         console.log('Firebase data: ', ref.toString());
