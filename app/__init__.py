@@ -10,6 +10,8 @@ from flask_login import LoginManager
 
 db = SQLAlchemy()
 
+# To use Alchemy database in order to store user data
+
 # Initialise a database variable
 
 login_manager = LoginManager()
@@ -48,3 +50,5 @@ def dev_app(config_name):
 	# 	return render_template("index.html")
 
 	return app
+
+	# Implement blueprint structure in order to run app

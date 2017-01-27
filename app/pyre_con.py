@@ -15,3 +15,5 @@ auth = firebase.auth()
 #authenticate a user
 
 user = auth.sign_in_with_email_and_password("maxwellicharia.com", "mySuperStrongPassword")
+
+# Was to implement pyrebase

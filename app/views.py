@@ -6,8 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # return render_template("base.html")
-    return "You guy"
+    return render_template("base.html")
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
@@ -35,7 +34,4 @@ def signup():
 	return render_template('auth/login.html', form=form, title='Register')
 	
 # If user has signed up login immediately
-
-@app.route('/login', methods=['POST'])
-def login():
-	pass
+# Implement user login to store to database

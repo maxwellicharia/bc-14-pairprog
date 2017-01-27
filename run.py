@@ -45,7 +45,7 @@ def Login():
 @app.route('/firebase')
 def firebase():
 	# refkey = 
-		render_template("firepad.html")
+		return render_template("firepad.html")
 
 if __name__ == '__main__':
     app.run()
