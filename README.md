@@ -11,10 +11,14 @@
 ## Installation
 
 1. Clone the repository.
-2. In the cloned repository, open the terminal and pip install -r requirements.txt.
+2. Create a virtual environment by typing virtualenv venv
+3. That will create the environment needed in order to run the modules present in th application.
+4. To initialise the virtual environment key in . venv/bin/activate
+5. In the terminal still, pip install -r requirements.txt in order to install the needed modules in the environment.
 
 ## Running the app
 
 * Open in terminal
 * ls in order to see the files present and there is a run.py
 * In order to run it, 			python run.py
+
