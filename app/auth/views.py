@@ -8,3 +8,7 @@ app = Flask(__name__)
 def signup():
 	form = SignUp()
 	return render_template('base.html', form=form, title='Signup')
+
+
+
+# Was to implement time deficit, model and blueprint review

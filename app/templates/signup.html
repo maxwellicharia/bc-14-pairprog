@@ -1,23 +1,31 @@
-    <h1>Signup to Pairprog</h1>
-    
-    <form method="post" action="{{ url_for('signup') }}">
-        <p><label>First Name:</label>
-        <input type="text" name="firstname" required="Fill the field"></p>
-        
-        <p><label>Last Name:</label>
-        <input type="text" name="lastname" required="Compulsory field"></p>
-
-        <p><label>Username:</label>
-        <input type="text" name="username" required="Compulsory field"></p>
-        
-  		<p><label>User password:</label>
-        <input type="password" name="password" required="Field is a must"></p>
-        
-        <p><label>E-mail:</label>
-  		<input type="email" name="email" required="Fill the field"></p>
-
-        <p><button type="submit">Submit</button></p>
-    
-    </form>
-
-    <p>Already have an account? Log in<a href="login.html"> here<a/></p>
+<!doctype html>
+<html>
+   <body>
+   <form action = "http://localhost:5000/login" method = "POST">
+         <fieldset>
+            <title>Login Form</title>
+            {{ form.hidden_tag() }}
+            
+            <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+            {{ form.username.label }}<br>
+               {{ form.username }}
+               <br>
+               {{ form.username.label }}<br>
+               {{ form.username }}
+               <br>
+               {{ form.username.label }}<br>
+               {{ form.username }}
+               <br>
+               
+               {{ form.password.label }}<br>
+               {{ form.password }}
+               <br>
+               
+               {{ form.submit }}
+            </div>
+            
+         </fieldset>
+      </form>
+      
+   </body>
+</html>

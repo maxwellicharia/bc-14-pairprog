@@ -6,3 +6,6 @@ result = firebase.get('/users', None)
 	print result
 
 new Firebase('https://docs-examples.firebaseio.com/web/data');
+
+
+# Was to implement database complication

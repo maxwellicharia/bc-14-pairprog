@@ -18,8 +18,11 @@ class SignUp(FlaskForm):
     """
         Signup form for the users to create a pairprogramming session account
         """
-    first_name = StringField('First Name', validators=[DataRequired()])
+    
     #Datarequired to ensure the user inputs the field
+
+    first_name = StringField('First Name', validators=[DataRequired()])
+    
     last_name = StringField('Last Name', validators=[DataRequired()])
     
     username = StringField('UserName', validators=[DataRequired()])
@@ -36,12 +39,12 @@ class SignUp(FlaskForm):
     submit = SubmitField('Sign Up')
 
     def check_username_valid(self, field):
-    # Function to check whether username is 
+    # Function to check whether username is valis and has not been taken up by anyone
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('Username is already in use.')
 
     def check_email_valid(self, field):
-    # Function to check whether the email has been taken by someone
+    # Function to check whether the email has been taken by someone and is unique
         if User.query.filter_by(Email=field.data).first():
             raise ValidationError('Invalid password, try again.')
 

@@ -36,7 +36,7 @@ class SignUp(FlaskForm):
     submit = SubmitField('Sign Up')
 
     def check_username_valid(self, field):
-    # Function to check whether username is 
+    # Function to check whether username is valid and has not been referenced anywhere in the database
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('Username is already in use.')
 

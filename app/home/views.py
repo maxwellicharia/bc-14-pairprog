@@ -12,3 +12,9 @@ def home():
     	Render the my main page
     	"""
     return render_template('base.html', title="Welcome")
+
+
+
+
+
+    # Incorporate view-form structure, blueprint revert back to initial structure
